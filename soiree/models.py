@@ -61,7 +61,7 @@ class User(AbstractBaseUser):
     school = models.CharField(max_length=30)
     occupation = models.CharField(max_length=30, blank=True, null=True)
     what_are_you_seeking_on_site = models.CharField(max_length=30, blank=True, null=True)
-    profile_pic = models.ImageField(blank=True, null=True)
+    #profile_pic = models.ImageField(blank=True, null=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name', 'age']
