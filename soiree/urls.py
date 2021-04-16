@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import MemoDetails, GenericAPIView, MemoAPIView, GenericUserAPIView, UserAPIView
+from .views import MemoDetails, MemoAPIView, GenericUserAPIView, UserAPIView
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('memos/', MemoAPIView.as_view()),
-    path('memos/<int:id>', GenericAPIView.as_view()),
+    path('memos/<int:id>', GenericUserAPIView.as_view()),
     # path('memos/', memo_list),
     # path('memo_details/<int:pk>', memo_detail),
     path('memo_details/<int:pk>/', MemoDetails.as_view()),
